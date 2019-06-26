@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" value="your name" name="name" id="namefield" tabindex="10" />
+
+<!-- <input type="button" value="show me" onclick="showMsg()">
+
+<p onmouseover="over()" onmouseout="out()">Mouse over here to change text</p> -->
+<button id="myButton">click here</button>
+    <script>
+    //Click event example
+    function showMsg(){
+        alert('hello your good');
+    }
+    //mouseover and mouse out example
+    function over(){
+        document.write('See got changed!!!');
+    }
+    function out(){
+        document.write('see the changes on mouse out here');
+    }
+
+// var nameField = document.getElementbyId("name");
+// //when the ID is clicked, run this function
+// nameField.onfocus = function() {
+// //if the field has the value "your name", leave it blank
+// alert(1);
+// if ( nameField.value == "your name" ) {
+// nameField.value = "";
+// }
+// };
+
+let myButton = document.getElementById('myButton');
+var enterSentence = {
+    name: 'foo',
+    handleEvent: function(){
+        console.log(this.name + ' handling ')
+}
+}
+console.log(enterSentence);
+
+myButton.addEventListener('click', enterSentence);
+
+    </script>
+</body>
+</html>

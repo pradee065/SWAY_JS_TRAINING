@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Slider</title>
+</head>
+<style>
+    .container ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .container ul li img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide-list {
+        display: none;
+    }
+
+    .custom-slider .fa-arrow-left {
+        position: fixed;
+        top: 50%;
+        font-size: 50px;
+        z-index: 10;
+        cursor: pointer;
+        color: red;
+    }
+
+    .custom-slider .fa-arrow-right {
+        position: fixed;
+        top: 50%;
+        right: 0px;
+        font-size: 50px;
+        z-index: 10;
+        cursor: pointer;
+        color: red;
+    }
+</style>
+
+<body>
+    <h2>SAMPLE SLIDER</h2>
+
+    <div class="container custom-slider">
+
+        <i class="fa fa-arrow-left" aria-hidden="true" onclick="prev()"></i>
+        <ul>
+            <li class="slide-list"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTit2XMDm94eTBCwlv1nEn0eyXYfWrkgVCMNsKv_vXJpoG5cSts"
+                    alt="">
+            </li>
+            <li class="slide-list"><img src="http://wowslider.com/sliders/demo-77/data1/images/road220058.jpg" alt="">
+            </li>
+            <li class="slide-list"><img src="http://wowslider.com/sliders/demo-18/data1/images/shanghai.jpg" alt="">
+            </li>
+            <li class="slide-list"><img src="http://wowslider.com/sliders/demo-18/data1/images/shanghai.jpg" alt="">
+            </li>
+            <li class="slide-list"><img src="http://wowslider.com/sliders/demo-77/data1/images/road220058.jpg" alt="">
+            </li>
+        </ul>
+        <i class="fa fa-arrow-right" aria-hidden="true" onclick="next()"></i>
+    </div>
+    <script>
+        var pointer = 0;
+        var slideNo = document.querySelectorAll('.slide-list');
+
+
+        function next() {
+            currentDisplay()
+            pointer++;
+            sliderSetter()
+        }
+        function prev() {
+            currentDisplay()
+            pointer--;
+            sliderSetter()
+        }
+        function currentDisplay() {
+            slideNo[pointer].style.display = "none";
+        }
+        function sliderSetter() {
+
+            if (pointer > slideNo.length - 1) {
+                pointer = 0;
+            }
+            if (pointer < 0) {
+                pointer = slideNo.length - 1;
+            }
+            slideNo[pointer].style.display = "block";
+        }
+        slideNo[pointer].style.display = "block";
+
+    </script>
+</body>
+<!-- dadhajdhajdhjh -->
+
+</html>

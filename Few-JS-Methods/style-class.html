@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+body {
+    color: blue;
+    font-size: 20px;
+    background: blue;
+}
+</style>
+<body>
+<p class="div">test</p>
+</body>
+<script>
+//To set the full style as a string, there’s a special property style.cssText:
+let name = document.querySelector('.div');
+name.style.cssText = `color: red !important;
+background-color: yellow;
+width: 100px;
+text-align: center;
+`;
+//Computed styles: getComputedStyle
+let computStyle = getComputedStyle(document.body);
+alert(computStyle.color);
+</script>
+</html>

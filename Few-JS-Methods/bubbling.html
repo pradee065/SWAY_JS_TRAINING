@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+div {
+    border: 2px solid red;
+    padding: 20px;
+}
+p {
+    border: 2px solid green;
+    padding: 15px;
+}
+a {
+    border: 2px solid blue;
+    padding: 5px;
+}
+</style>
+<body>
+
+    <div onclick="mainfun1()" class="mainfun1">
+        div tag
+      <p>p tag
+
+        <a onclick="fun1(event)" class="fun1">a tag goes here</a>
+      </p>
+
+      <p> @<span></span> Testststst</p>
+
+
+    </div>
+
+</body>
+<script>
+function fun1(event){
+    var element = document.querySelector('.fun1');
+    element.style = "background-color: blue";
+    //event.stopPropagation();
+    event.preventDefault();
+   
+}
+function mainfun1(){
+    var mainelement = document.querySelector('.mainfun1');
+    mainelement.style = "background-color: orange";
+    //event.stopPropagation();
+}
+
+(function (){
+   // debugger;
+    var d = new Date();
+    var year = d.getFullYear();
+    document.querySelector('span').innerHTML = year;
+}());
+
+
+
+</script>
+</html>

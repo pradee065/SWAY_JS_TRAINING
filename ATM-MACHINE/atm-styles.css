@@ -1,0 +1,44 @@
+html, body, .atm-machine {
+    height: 100%;
+    padding: 0px;
+}
+header {
+    background: #00BCD4;
+    color: white;
+    padding: 28px;
+    font-weight: bold;
+}
+.atm-machine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+}
+.atm-machine .atm-left {
+    background: gray;
+    font-size: 27px;
+    color: greenyellow;
+    border-right: 2px solid #fff;
+}
+.atm-left button {
+    background: none;
+    border-radius: 11px;
+    outline: none;
+    border: 2px solid #fff;
+    padding: 10px 28px;
+}
+.atm-machine .atm-right {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 23px;
+}
+.atm-right ul li {
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+    width: 46%;
+    margin-bottom: 34px;
+    margin-left: 17px;
+}
